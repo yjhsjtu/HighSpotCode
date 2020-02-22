@@ -7,7 +7,7 @@
     a. sort mixtape-data.json by playlist id in ascending order using merge sort (details in step 5).
     b. sort change.json by playlist id in ascending order using merge sort
     c. load a small chunk of playlists from mixtape-data.json and change.json seperately into memory. 
-    d. compare the playlist idS from two chunks. If they are same, For remove playlist change, skip it and move to next playlist in both chunks. For update playlist change, update playlist in both chunk and output the merged playlist to output.json. move to next playlist in both chunks. For add new playlist change, throw error message and exit since newly added playlist should has new id
+    d. compare the playlist idS from two chunks. If they are same, For remove playlist change, skip it and move to next playlist in both chunks. For update playlist change, merge playlist details from both chunk and output the merged playlist to output.json. Move to the next playlist in both chunks. For add new playlist change, throw error message and exit
     e. if mixtape-data.json chunk has smaller id, move to its next playlist
     f. if change.json chunk has smaller id, output the playlist to output.json and move to its next playlist.
     g. when playlist from a chunk is processed, read next chunk from the same file
