@@ -11,7 +11,7 @@
   d. Compare the playlist id from two chunks.
       If they are same
         For remove playlist change, skip it and move to next playlist in both chunks
-        For update playlist change, update playlist in both chunk and output the merged playlist to output.json. move to next playlist in both chunks
+        For update playlist change, update playlist in both chunk and output the merged playlist to output.json. move to next playlist in         both chunks
         For add new playlist change, throw error message and exit since newly added playlist should has new id
       if mixtape-data.json chunk has smaller id, move to next playlist
       if change.json chunk has smaller id, output the playlist to output.json and move to next playlist
@@ -22,10 +22,4 @@
     c. Merge sort playlists from 50 blocks. Get one playlist from each block and put them in a min priority queue with size 50. 
     Get the playlist with minimal id and write it to the output file. Fetch the nxet playlist in the same block and put it in the queue.
     After a whole block is processed, read the next block from the same chunk into memory.
-    
   
-  
-  
-  
-  For example, memory is 4G, file is 100G. split file to
-  2G chunks and read each chunk to memory and sort them
