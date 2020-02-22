@@ -7,14 +7,10 @@
     a. sort mixtape-data.json by playlist id in ascending order using merge sort (details in step 5).
     b. sort change.json by playlist id in ascending order using merge sort
     c. load a small chunk of playlists from mixtape-data.json and change.json seperately into memory. 
-    d. Compare the playlist id from two chunks.
-                  If they are same
-                           For remove playlist change, skip it and move to next playlist in both chunks
-                           For update playlist change, update playlist in both chunk and output the merged playlist to output.json. move to next playlist in both chunks
-                           For add new playlist change, throw error message and exit since newly added playlist should has new id
-                  if mixtape-data.json chunk has smaller id, move to next playlist
-                  if change.json chunk has smaller id, output the playlist to output.json and move to next playlist
-                  When a chunk is ended, read next chunk from the same file
+    d. compare the playlist idS from two chunks. If they are same, For remove playlist change, skip it and move to next playlist in both chunks. For update playlist change, update playlist in both chunk and output the merged playlist to output.json. move to next playlist in both chunks. For add new playlist change, throw error message and exit since newly added playlist should has new id
+    e. if mixtape-data.json chunk has smaller id, move to its next playlist
+    f. if change.json chunk has smaller id, output the playlist to output.json and move to its next playlist.
+    g. when playlist from a chunk is processed, read next chunk from the same file
  5. how to sort big file by playlist in ascending order. Assume memory is 4G and file is 100G
     a. split file into 2G chunks. Load each chunk in memory and quick sort in memory, output the sorted result to a file
     b. Split each 2G chunk of the sorted file into 0.4G size blocks. load a block from each chunk in memory, totally we have 50*0.4=2G.
