@@ -3,7 +3,7 @@
 2. Build the code and run under the release directory from command line as below
          HighSpotCode\Release> HighSpotCode.exe mixtape-data.json change.json output.json
 3. The json parser load whole file mixtape-data.json and change.json into memory and parse them. If these files are too big to be loaded      in memory, the program can not work
-4. To make the program work for big files that can not be loaded in memory. We can use the following algorithm:
+4. To make the program work for big files that can not be loaded in memory, We can take the following steps:
     a. sort mixtape-data.json by playlist id in ascending order using merge sort (details in step 5).
     b. sort change.json by playlist id in ascending order using merge sort
     c. load a small chunk of playlists from mixtape-data.json and change.json seperately into memory. 
