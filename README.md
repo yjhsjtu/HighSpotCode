@@ -20,6 +20,7 @@
     After a whole block is processed, read the next block from the same chunk into memory.
  6. If distributed system is allowed to use, We can load mixtape-data.json into distributed key value db like dynamo db and persist playlist/user/book into three dbs. Next we can update db based on change.json and generate output.json
  7. change.json supports three types of chage. Here is some example
+ ```json
  {
   "removedplaylists" : [
       {
@@ -58,5 +59,5 @@
     }
   ]
 }
- 
+```
   
